@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo2-217x217.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Bebas+Neue:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="footer7 cid-sBm98fVWzt" once="footers" id="footer7-t">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2025 AvengersBSC - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="custom-html-u"><!-- Type valid HTML here -->
+
+<div>
+ <!--notepad -->
+         <a id="licalculator"></a>
+               <div class="col-lg-12 mt-5 block-padding force notepad pl-5 pr-5">
+                   <div class="section-heading text-center">
+                  <h2>BNB Calculator</h2>
+                  <p class="subtitle">Check How Much You Earn</p>
+               </div>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <!-- contact-info-->
+                        <div class="col-lg-10 offset-lg-1 text-center">
+                           <h4>Enter your BEP20 Wallet Address</h4>
+                        </div>
+                        <!-- Form Starts -->
+                        <div id="contact_form">
+                           <div class="form-group">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <input type="text" name="address" id="ukauka_token" class="form-control input-field"> 
+                                 </div>
+                              </div>
+
+                           <div class="col-lg-10 offset-lg-1 text-center">
+                              <button type="button" onclick="getERC20Balance();" class="btn btn-tertiary">Calculate</button>
+                              <p></p>
+                           </div>
+                              <div class="col-lg-12 offset-lg-1 text-center">
+                                 <div class="contact-info res-margin">
+                                    <div class="row res-margin">
+                                       <div class="col-lg-5">
+                                          <div class="contact-icon bg-secondary text-light">
+                                          
+                                             <!-- contact-icon info-->
+                                             <div class="contact-icon-info">
+                                                <h5>Next Payout</h5>
+                                                <div id="output1"><br></div>
+                                             </div>
+                                          </div>
+                                          <!-- /contact-icon-->
+                                       </div>
+                                       <!-- /col-lg-->
+                                       <div class="col-lg-5 res-margin">
+                                          <div class="contact-icon bg-secondary text-light">
+                                             
+                                             <!-- contact-icon info-->
+                                             <div class="contact-icon-info">
+                                                <h5>Total BNB Paid</h5>
+                                                <div id="output2"><br></div>
+                                             </div>
+                                          </div>
+                                          <!-- /contact-icon-->
+                                       </div>
+                                    </div>
+                                    <!-- /row -->
+                                 </div>
+                                 <!-- /contact-info-->
+                              </div>
+                              <br>
+                              <!-- /col-lg-->
+                              <div class="col-lg-12 offset-lg-1 text-center">
+                                 <div class="contact-info res-margin">
+                                    <div class="row res-margin">
+                                       <div class="col-lg-5">
+                                          <div class="contact-icon bg-secondary text-light">
+                                             
+                                             <!-- contact-icon info-->
+                                             <div class="contact-icon-info">
+                                                <h5>Last Payout Time</h5>
+                                                <div id="output3"><br></div>
+                                             </div>
+                                          </div>
+                                          <!-- /contact-icon-->
+                                       </div>
+                                       <!-- /col-lg-->
+                                       <div class="col-lg-5 res-margin">
+                                          <div class="contact-icon bg-secondary text-light">
+                                             
+                                             <!-- contact-icon info-->
+                                             <div class="contact-icon-info">
+                                                <h5>$UKA OWNED</h5>
+                                                <div id="output4"><br></div>
+                                             </div>
+                                          </div>
+                                          <!-- /contact-icon-->
+                                       </div>
+                                    </div>
+                                    <!-- /row -->
+                                 </div>
+                                 <!-- /contact-info-->
+                              </div>
+                              <!-- /col-lg-->
+                           <div class="col-lg-10 offset-lg-1 text-center">
+                              <a title="Instagram" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x9B35D28e34ab583381c49dCD0EDfa82F13F44805" target="_blank" class="btn btn-tertiary"><div id="output5"></div> 
+                                 <br>Click Here To Buy More $UKA and Earn More BNB</a>
+                           </div>
+                              </div>
+                              <!-- /form-group-->
+                              <!-- Contact results -->
+                              <div id="contact_results"></div>
+                           </div>
+                           <!-- /contact-form-->
+                        </div>
+                     
+                     <!-- ornament starts-->
+                     <div class="ornament-stars mt-8" data-aos="zoom-out"></div>
+                  </div>
+                  <!-- /row-->
+               </div>
+               <!-- /col-lg-->
+            </div>
+            <!-- /.row-->
+<!-- Bootstrap core & Jquery -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!-- Custom Js -->
+      <script src="js/custom.js"></script>
+      <script src="js/plugins.js"></script>
+      <!-- Prefix free -->
+      <script src="js/prefixfree.min.js"></script>
+	  <!-- number counter script -->
+      <script src="js/counter.js"></script>
+      <!-- maps -->
+      <script src="js/map.js"></script>
+      <!-- GreenSock -->
+      <script src="vendor/layerslider/js/greensock.js"></script>
+      <!-- LayerSlider script files -->
+      <script src="vendor/layerslider/js/layerslider.transitions.js"></script>
+      <script src="vendor/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+      <script src="vendor/layerslider/js/layerslider.load.js"></script></div>
+
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  
+</body>
+</html>
