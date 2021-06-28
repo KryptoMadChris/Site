@@ -40,14 +40,14 @@ function myDetails() {
         } else document.getElementById("earnings").innerHTML = "Connect to Wallet", document.getElementById("earnings1").innerHTML = "Connect to Wallet"
     })()
 }
-async function withdrawBusd() {
+async function claim() {
     const e = new ethers.providers.Web3Provider(window.ethereum);
     var t = printrAdd,
         n = printrABI,
         a = new ethers.Contract(t, n, e.getSigner());
     56 == parseInt(await window.ethereum.chainId) && "Connect" != document.getElementById("address").innerHTML ? window.ethereum || window.ethereum.isMetaMask || ethereum && ethereum.isTrust ? await a.BUSDWithdraw() : alert("Please connect to Metamask/Trustwallet and switch to Binance Network") : alert("Connect To Binance Chain Mainnet")
 }
-async function withdrawToken() {
+async function claim() {
     const e = new ethers.providers.Web3Provider(window.ethereum);
     var t = printrAdd,
         n = printrABI;
