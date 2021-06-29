@@ -20,3 +20,11 @@ async function claim() {
         a = new ethers.Contract(t, n, e.getSigner());
     56 == parseInt(await window.ethereum.chainId) && "Connect" != document.getElementById("address").innerHTML ? window.ethereum || window.ethereum.isMetaMask || ethereum && ethereum.isTrust ? await a.claim() : alert("Please connect to Metamask/Trustwallet and switch to Binance Network") : alert("Connect To Binance Chain Mainnet")
 }
+async function dividendTokenBalanceOf() {
+    const e = new ethers.providers.Web3Provider(window.ethereum);
+    var t = printrAdd,
+        n = printrABI;
+    if (console.log(document.getElementById("tokenAdd").value), "" == document.getElementById("tokenAdd").value) return alert("Please Enter a Valid Token Address"), !1;
+    var a = new ethers.Contract(t, n, e.getSigner());
+    56 == parseInt(await window.ethereum.chainId) && "Connect" != document.getElementById("address").innerHTML ? window.ethereum || window.ethereum.isMetaMask || ethereum && ethereum.isTrust ? await a.claim(document.getElementById("tokenAdd").value) : alert("Please connect to Metamask/Trustwallet and switch to Binance Network") : alert("Connect To Binance Chain Mainnet")
+}
