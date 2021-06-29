@@ -5,8 +5,8 @@
 }
 
 :root {
-  --app-container: #000000;
-  --main-color: #ffe161;
+  --app-container: #f3f6fd;
+  --main-color: #1f1c2e;
   --secondary-color: #4A4A4A;
   --link-color: #1f1c2e;
   --link-color-hover: #c3cff4;
@@ -20,7 +20,7 @@
   --more-list-shadow: rgba(209, 209, 209, 0.4);
   --button-bg: #1f1c24;
   --search-area-bg: #fff;
-  --star: #2f3142;
+  --star: #1ff1c2e;
   --message-btn: #fff;
 }
 
@@ -253,7 +253,7 @@ button, a {
 
 .projects-section {
   flex: 2;
-  background-color: #111110;
+  background-color: #F8CE68;
   border-radius: 32px;
   padding: 32px 32px 0 32px;
   overflow: hidden;
