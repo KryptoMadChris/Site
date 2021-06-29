@@ -156,7 +156,7 @@ button, a {
   box-shadow: none;
 }
 
-.search-input {
+/*.search-input {
   border: none;
   flex: 1;
   outline: none;
@@ -170,7 +170,7 @@ button, a {
   color: var(--main-color);
   opacity: 0.6;
 }
-
+*/
 .add-btn {
   color: #fff;
   background-color: var(--button-bg);
