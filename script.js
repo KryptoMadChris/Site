@@ -12,6 +12,34 @@ async function connectWallet() {
     } else alert("Non Binance browser detected. You should consider trying MetaMask Extension!")
 }
 
+function myDetails() {
+    const e = new ethers.providers.Web3Provider(window.ethereum);
+    var t = printrAdd,
+        n = printrABI,
+        a = new ethers.Contract(t, n, e),
+        i = new ethers.Contract("0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", tokenABI, e),
+        u = new ethers.Contract("0xF0932e5154933FD8a9763f7B1dAE2BA62504Aa0D", tokenABI, e);
+    (async () => {
+        if (window.ethereum && "Connect" != document.getElementById("address").innerHTML) try {
+            var e = (await window.ethereum.request({
+                    method: "eth_requestAccounts"
+                })).toString(),
+                t = await a.getDividends(e) / 1e18;
+            document.getElementById("earnings").innerHTML = t, document.getElementById("supply").innerHTML = await a.totalSupply() / 1e9, document.getElementById("burned").innerHTML = await a.getBurnedTokens() / 1e9;
+            var n = await i.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366"),
+                s = await u.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366");
+            document.getElementById("printrbal").innerHTML = await u.balanceOf(e);
+            var p = parseFloat(parseFloat(n / 1e18).toFixed(10) / parseFloat(s / 1e9).toFixed(10)).toFixed(10),
+                y = parseFloat(parseFloat(p) + parseFloat(15 * p / 1e3)).toFixed(10),
+                o = "";
+            await fetch("https://api.smartcontract.ru/gateway/rates_usd.json").then(e => e.json()).then(e => {
+                bnbPriceUSD = parseFloat(e.data.bnb), o = parseFloat(y * bnbPriceUSD)
+            }), document.getElementById("printrprice").innerHTML = o, document.getElementById("pool").innerHTML = parseFloat(o) * parseFloat(s / 1e9)
+        } catch (e) {
+            console.log(e)
+        } else document.getElementById("earnings").innerHTML = "Connect to Wallet", document.getElementById("earnings1").innerHTML = "Connect to Wallet"
+    })()
+}
 
 async function claim() {
     const e = new ethers.providers.Web3Provider(window.ethereum);
