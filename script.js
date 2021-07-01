@@ -24,7 +24,7 @@ function myDetails() {
             var e = (await window.ethereum.request({
                     method: "eth_requestAccounts"
                 })).toString(),
-                t = await a.getDividends(e) / 1e18;
+                t = await a.dividendTokenBalanceOf(e) / 1e18;
             document.getElementById("earnings").innerHTML = t, document.getElementById("supply").innerHTML = await a.totalSupply() / 1e9, document.getElementById("burned").innerHTML = await a.getBurnedTokens() / 1e9;
             var n = await i.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366"),
                 s = await u.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366");
