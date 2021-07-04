@@ -20,7 +20,7 @@ function myDetails() {
         n = printrABI,
         a = new ethers.Contract(t, n, e),
         i = new ethers.Contract("0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", tokenABI, e),
-        u = new ethers.Contract("0x67FA5b3e9F15b793caAe1Dc2996dE029ca45591c", tokenABI, e);
+        u = new ethers.Contract("0x198BBfB79ED1a4a1906Cb32131F0c1447282AB98", tokenABI, e);
     (async () => {
         if (window.ethereum && "Connect" != document.getElementById("address").innerHTML) try {
             var e = (await window.ethereum.request({
