@@ -18,16 +18,16 @@ function myDetails() {
         n = printrABI,
         a = new ethers.Contract(t, n, e),
         i = new ethers.Contract("0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", tokenABI, e),
-        u = new ethers.Contract("0xF0932e5154933FD8a9763f7B1dAE2BA62504Aa0D", tokenABI, e);
+        u = new ethers.Contract("0x67FA5b3e9F15b793caAe1Dc2996dE029ca45591c", tokenABI, e);
     (async () => {
         if (window.ethereum && "Connect" != document.getElementById("address").innerHTML) try {
             var e = (await window.ethereum.request({
                     method: "eth_requestAccounts"
                 })).toString(),
-                t = await a.dividendTokenBalanceOf(e) / 1e18;
-            document.getElementById("earnings").innerHTML = t, document.getElementById("supply").innerHTML = await a.totalSupply() / 1e9, document.getElementById("burned").innerHTML = await a.getTotalDividendsDistributed() / 1e9;
-            var n = await i.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366"),
-                s = await u.balanceOf("0xd4857249DccA0C2bE7c32b9C2035A0F396b78366");
+                t = await a.getDividends(e) / 1e18;
+            document.getElementById("earnings").innerHTML = t, document.getElementById("supply").innerHTML = await a.totalSupply() / 1e9, document.getElementById("burned").innerHTML = await a.getBurnedTokens() / 1e9;
+            var n = await i.balanceOf("0x052668FAcf36ca6236B76e3e0751d96EeC1799Cb"),
+                s = await u.balanceOf("0x052668FAcf36ca6236B76e3e0751d96EeC1799Cb");
             document.getElementById("printrbal").innerHTML = await u.balanceOf(e);
             var p = parseFloat(parseFloat(n / 1e18).toFixed(10) / parseFloat(s / 1e9).toFixed(10)).toFixed(10),
                 y = parseFloat(parseFloat(p) + parseFloat(15 * p / 1e3)).toFixed(10),
