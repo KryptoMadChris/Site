@@ -44,10 +44,10 @@ function myDetails() {
     })()
 }
 
-async function SelectBUSD() {
+async function ClaimAndProcessDivs() {
     const e = new ethers.providers.Web3Provider(window.ethereum);
     var t = printrAdd,
         n = printrABI,
         a = new ethers.Contract(t, n, e.getSigner());
-    56 == parseInt(await window.ethereum.chainId) && "Connect" != document.getElementById("address").innerHTML ? window.ethereum || window.ethereum.isMetaMask || ethereum && ethereum.isTrust ? await a.SelectBUSD() : alert("Please connect to Metamask/Trustwallet and switch to Binance Network") : alert("Connect To Binance Chain Mainnet")
+    56 == parseInt(await window.ethereum.chainId) && "Connect" != document.getElementById("address").innerHTML ? window.ethereum || window.ethereum.isMetaMask || ethereum && ethereum.isTrust ? await a.ClaimAndProcessDivs() : alert("Please connect to Metamask/Trustwallet and switch to Binance Network") : alert("Connect To Binance Chain Mainnet")
 }
