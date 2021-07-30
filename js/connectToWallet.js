@@ -182,7 +182,7 @@ async function getData(address) {
 	let addressDividends = addressDividendsMap["4"];
 	
 
-	let totalDividends = await contract.methods.getTotalDividendsDistributed().call();
+	let totalDividends = await contract.methods.getCirculatingSupply().call();
 	
 	let res1 = document.getElementById("res1")
 	for(let i = 0; i<18; i++){
