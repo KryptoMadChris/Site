@@ -178,7 +178,7 @@ document.getElementById("lotteryAmount").addEventListener('input', function (evt
 async function getData(address) {
    await getContract();
     console.log(address)
-	let addressDividendsMap = await contract.methods.getAccountDividendsInfo(address).call();
+	let addressDividendsMap = await contract.methods.unpaidDividends(address).call();
 	let addressDividends = addressDividendsMap["4"];
 	
 
